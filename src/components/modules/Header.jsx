@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../imagens/Geral/LOGO NOVA.png";
 
 export default function Header() {
   return;
