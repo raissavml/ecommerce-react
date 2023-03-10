@@ -1,11 +1,12 @@
 import React from "react";
+import Home from "../pages/Home.jsx";
 
 export default function Footer() {
   return;
   <>
     <footer>
       <div className="palavras-chaves-footer">
-        <a href="index.html">
+        <a href={Home}>
           <h1>FRAGATTA</h1>
         </a>
         <ul>

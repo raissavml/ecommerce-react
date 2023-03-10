@@ -1,4 +1,5 @@
 import React from "react";
+import Home from "./Home.jsx";
 
 export default function Login() {
   return (
@@ -7,9 +8,9 @@ export default function Login() {
         <section>
           <input type="text" placeholder="Login" />
           <input type="password" className="senha" placeholder="Senha" />
-          <img src="../Imagens/icones/olho1.png" className="btn" />
+          <img src="../Imagens/icones/olho1.png" className="btn" alt="" />
           <button className="button">entrar</button>
-          <a href="">esqueceu sua senha?</a>
+          <a href={Home}>esqueceu sua senha?</a>
         </section>
       </main>
     </>

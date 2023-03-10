@@ -1,4 +1,6 @@
 import React from "react";
+import CamisaListrada from "../../imagens/Geral/Camisa Listrada.jpg";
+import CorCamisaListrada from "../../imagens/Geral/corcamisalistrada.png";
 
 export default function Carrinho() {
   return (
@@ -22,7 +24,7 @@ export default function Carrinho() {
                 <a href>
                   <img
                     classname="ImagemProduto"
-                    src="../Imagens/Geral/Camisa Listrada.jpg"
+                    src={CamisaListrada}
                     alt="Homem vestindo camisa branca com listras cinzas e textura, apoiado no parapeito de uma ponte. Foto tirada ao pôr do sol."
                   />
                 </a>
@@ -37,7 +39,7 @@ export default function Carrinho() {
                   <div classname="d-flex PreferenciasCliente">
                     <img
                       classname="CorProduto"
-                      src="../Imagens/Geral/corcamisalistrada.png"
+                      src={CorCamisaListrada}
                       alt="Cor selecionada: Branco e cinza"
                     />
                     <p classname="TamanhoProduto">PP</p>
