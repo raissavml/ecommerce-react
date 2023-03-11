@@ -1,4 +1,4 @@
-import Home from "./components/pages/Carrinho";
+import Home from "./components/pages/Home";
 
 function App() {
   return <Home/>;

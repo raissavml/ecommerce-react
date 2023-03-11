@@ -9,8 +9,8 @@ export default function Login() {
           <input type="text" placeholder="Login" />
           <input type="password" className="senha" placeholder="Senha" />
           <img src="../Imagens/icones/olho1.png" className="btn" alt="" />
-          <button className="button">entrar</button>
-          <a href={Home}>esqueceu sua senha?</a>
+          <button className="button">Entrar</button>
+          <a href={Home}>Esqueceu sua senha?</a>
         </section>
       </main>
     </>
