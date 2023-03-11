@@ -3,6 +3,11 @@ import CamisaListrada from "../../imagens/Geral/Camisa Listrada.jpg";
 import CorCamisaListrada from "../../imagens/Geral/corcamisalistrada.png";
 
 export default function Carrinho() {
+  const reduceProductQuantity = () =>
+    "alteraQuantidade(false, 'QuantidadeProduto')";
+  const addProductQuantity = () =>
+    "alteraQuantidade(true, 'QuantidadeProduto')";
+
   return (
     <>
       <main classname="d-flex flex-column">
@@ -45,14 +50,14 @@ export default function Carrinho() {
                     <p classname="TamanhoProduto">PP</p>
                     <button
                       classname="ReduzirQuantidade"
-                      onclick="alteraQuantidade(false, 'QuantidadeProduto')"
+                      onclick={reduceProductQuantity}
                     >
                       -
                     </button>
                     <p id="QuantidadeProduto">0</p>
                     <button
                       classname="AumentarQuantidade"
-                      onclick="alteraQuantidade(true, 'QuantidadeProduto')"
+                      onclick={addProductQuantity}
                     >
                       +
                     </button>
