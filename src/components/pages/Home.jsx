@@ -1,5 +1,4 @@
 import React from "react";
-import Produto from "./Produto.jsx";
 import Carrossel1 from "../../imagens/Carrossel/1.jpg";
 import Carrossel2 from "../../imagens/Carrossel/2.jpg";
 import Carrossel3 from "../../imagens/Carrossel/3.jpg";
@@ -9,6 +8,7 @@ import DestaqueMasculino from "../../imagens/Geral/destaque.png";
 import CamisaFeminina from "../../imagens/Geral/Camisa_fem.png";
 import CalcaFeminina from "../../imagens/Geral/Calça_fem.png";
 import DestaqueFeminino from "../../imagens/Geral/destaque.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -23,49 +23,49 @@ export default function Home() {
       <h1 className="moda-masculina">Moda Masculina</h1>
       <section className="card">
         <div className="camisa-masc">
-          <a href={Produto}>
+          <Link to="/produtos">
             <figure>
               <img src={CamisaMasculina} alt="Camisa-masculina" />
             </figure>
-          </a>
+          </Link>
         </div>
         <div className="calca-masc">
-          <a href={Produto}>
+          <Link to="/produtos">
             <figure>
               <img src={CalcaMasculina} alt="Calça-masculina" />
             </figure>
-          </a>
+          </Link>
         </div>
         <div className="destaques-masc">
-          <a href={Produto}>
+          <Link to="/produtos">
             <figure>
               <img src={DestaqueMasculino} alt="Destaques-masculinos" />
             </figure>
-          </a>
+          </Link>
         </div>
       </section>
       <h1 className="moda-feminina">Moda Feminina</h1>
       <section className="card">
         <div className="camisa-fem">
-          <a href={Produto}>
+          <Link to="/produtos">
             <figure>
               <img src={CamisaFeminina} alt="Camisa-feminina" />
             </figure>
-          </a>
+          </Link>
         </div>
         <div className="calca-fem">
-          <a href={Produto}>
+          <Link to="/produtos">
             <figure>
               <img src={CalcaFeminina} alt="Calça-feminina" />
             </figure>
-          </a>
+          </Link>
         </div>
         <div className="destaque-fem">
-          <a href={Produto}>
+          <Link to="/produtos">
             <figure>
               <img src={DestaqueFeminino} alt="Destaques-femininos" />
             </figure>
-          </a>
+          </Link>
         </div>
       </section>
     </>

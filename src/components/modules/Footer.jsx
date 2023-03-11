@@ -1,35 +1,34 @@
 import React from "react";
-import Home from "../pages/Home.jsx";
-import Produto from "../pages/Produto.jsx";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <>
       <footer>
         <div className="palavras-chaves-footer">
-          <a href={Home}>
+          <Link to="/">
             <h1>FRAGATTA</h1>
-          </a>
+          </Link>
           <ul>
             <li>
-              <a className="itemFooter" href={Produto}>
+              <Link className="itemFooter" to="/produtos">
                 Newsletter
-              </a>
-              <a className="itemFooter" href={Produto}>
+              </Link>
+              <Link className="itemFooter" to="/produtos">
                 Contato
-              </a>
-              <a className="itemFooter" href={Produto}>
+              </Link>
+              <Link className="itemFooter" to="/produtos">
                 Redes Sociais
-              </a>
-              <a className="itemFooter" href={Produto}>
+              </Link>
+              <Link className="itemFooter" to="/produtos">
                 Condições Legais e Privacidade
-              </a>
-              <a className="itemFooter" href={Produto}>
+              </Link>
+              <Link className="itemFooter" to="/produtos">
                 Carreiras
-              </a>
-              <a className="itemFooter" href={Produto}>
+              </Link>
+              <Link className="itemFooter" to="/produtos">
                 Mapa do Site
-              </a>
+              </Link>
             </li>
           </ul>
           <p id="endereco">Rua da Boa Vontade, 300. Cajuzinho - SP</p>

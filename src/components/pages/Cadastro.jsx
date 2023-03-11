@@ -1,6 +1,6 @@
 import React from "react";
-import Login from "./Login.jsx";
 import Olho1 from "../../imagens/icones/olho1.png";
+import { Link } from "react-router-dom";
 
 export default function Cadastro() {
   return (
@@ -14,10 +14,10 @@ export default function Cadastro() {
           <button className="button">Cadastre-se</button>
           <div className="haveLogin">
             <span>
-              já tem login?{" "}
-              <a href={Login} target="_blank" rel="noreferrer">
-                entre
-              </a>
+              já está cadastrado?{" "}
+              <Link to="/login" target="_blank" rel="noreferrer">
+                Fazer login
+              </Link>
             </span>
           </div>
         </section>

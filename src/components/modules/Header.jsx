@@ -1,27 +1,23 @@
 import React from "react";
-import Home from "../pages/Home.jsx";
-import Produto from "../pages/Produto.jsx";
-import Login from "../pages/Login.jsx";
-import Cadastro from "../pages/Cadastro.jsx";
-import Carrinho from "../pages/Carrinho.jsx";
 import IconeMenu from "../../imagens/icones/icone-menu.png";
 import IconeLupa from "../../imagens/icones/icone-lupa.png";
 import IconeCarrinho from "../../imagens/icones/icone-carrinho.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <>
       <header>
         <div className="logo">
-          <a href={Home}>
+          <Link to="/">
             <p className="nome-logo">FRAGATTA</p>
-          </a>
+          </Link>
         </div>
         <div cclassName="funcionalidadesHeader">
           <ul className="procurar">
-            <a href={Produto}>
+            <Link to="/produtos">
               <img className="menu" src={IconeMenu} alt="icone do menu" />
-            </a>
+            </Link>
             <img
               className="menu"
               src={IconeLupa}
@@ -36,19 +32,19 @@ export default function Header() {
 
           <ul className="navegadores">
             <li>
-              <a href={Carrinho}>
+              <Link to="/carrinho">
                 <img
                   className="icone-carrinho"
                   src={IconeCarrinho}
                   alt="icone do carrinho para acessar suas compras"
                 />
-              </a>
-              <a className="login" href={Login}>
+              </Link>
+              <Link className="login" to="/login">
                 Login
-              </a>
-              <a className="login" href={Cadastro}>
+              </Link>
+              <Link className="login" to="/cadastro">
                 Cadastre-se
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
