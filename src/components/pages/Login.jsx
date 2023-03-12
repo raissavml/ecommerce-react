@@ -6,8 +6,13 @@ export default function Login() {
   const [currentUser, setCurrentUser] = React.useState("");
 
   React.useEffect(() => {
-    console.log();
+    fetch("localhost:3080/users")
+      .then((response) => response.json())
+      .then((data) => setUsers(data));
   }, []);
+  console.log("dentro");
+
+  const handleLogin = () => console.log("on click");
 
   return (
     <>
@@ -16,7 +21,14 @@ export default function Login() {
           <input type="text" placeholder="Login" />
           <input type="password" className="senha" placeholder="Senha" />
           <img src="../Imagens/icones/olho1.png" className="btn" alt="" />
-          <button className="button">Entrar</button>
+          <button onClick={handleLogin} className="button">
+            Entrar
+            {users.map((user) => (
+              value={user.password})
+              (user.id) => setCurrentUser(user.id)
+            )
+            }
+          </button>
           <Link to="/">Esqueceu sua senha?</Link>
         </section>
       </main>
