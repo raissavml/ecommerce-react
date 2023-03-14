@@ -1,3 +1,4 @@
+import React from "react";
 import Home from "./components/pages/Home";
 import Login from "./components/pages/Login";
 import Cadastro from "./components/pages/Cadastro";
@@ -20,5 +21,6 @@ function App() {
   </BrowserRouter>
   );
 }
+
 
 export default App;
