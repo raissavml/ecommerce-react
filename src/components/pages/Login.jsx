@@ -1,49 +1,67 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 // == Images ==
 import olho1 from "../../imagens/icones/olho1.png";
 
+import { saveToken } from "../../helpers/Auth";
+
 export default function Login() {
-  const [currentUser, setCurrentUser] = React.useState("");
-  const [emailLogin, setEmailLogin] = React.useState("");
-  const [passwordLogin, setPasswordLogin] = React.useState("");
+  const navigate = useNavigate();
 
-  //const validation = (email, password) => {
-  // const user = users.find((user) => login === user.email);
-  // if (typeof user !== "undefined") {
-  //   return user.password === password;
-  // }
-  // return false;
-  // };
-  React.useEffect(() => {
-    fetch("http://localhost:3080/users")
+  const [showError, setShowError] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+
+    fetch("http://localhost:3080/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-type": "application/json" },
+    })
       .then((response) => response.json())
-      .then((data) => setCurrentUser(data));
-  }, []);
+      .then(({ token }) => {
+        saveToken(token);
+        navigate("/carrinho");
+      })
+      .catch(() => {
+        setEmail("");
+        setPassword("");
+        setShowError(true);
+      });
+  };
 
-  const handleLogin = {};
+  const handleInputFocus = () => {
+    setShowError(false);
+  };
 
   return (
     <>
       <main>
         <section>
           <input
-            type="text"
-            placeholder="Login"
+            type="email"
+            placeholder="Email"
             name="email"
+            value={email}
             onChange={(e) => {
-              setEmailLogin(e.target.value);
+              setEmail(e.target.value);
             }}
+            onFocus={handleInputFocus}
           />
           <input
             type="password"
             className="senha"
             placeholder="Senha"
             name="password"
+            value={password}
             onChange={(e) => {
-              setPasswordLogin(e.target.value);
+              setPassword(e.target.value);
             }}
+            onFocus={handleInputFocus}
           />
           <img src={olho1} className="btn" alt="" />
           <button onClick={handleLogin} className="button">
