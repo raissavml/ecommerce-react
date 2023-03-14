@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 // == Images ==
@@ -17,11 +18,11 @@ export default function Login() {
   const handleLogin = (event) => {
     event.preventDefault();
 
-    fetch("http://localhost:3080/login", {
-      method: "POST",
-      body: JSON.stringify({ email, password }),
-      headers: { "Content-type": "application/json" },
-    })
+    axios
+      .post("http://localhost:3080/login", {
+        email,
+        password,
+      })
       .then((response) => response.json())
       .then(({ token }) => {
         saveToken(token);
