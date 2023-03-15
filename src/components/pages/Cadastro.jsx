@@ -6,6 +6,7 @@ import { Axios } from "axios";
 export default function Cadastro() {
   const [emailRegister, setEmailRegister] = React.useState("");
   const [passwordRegister, setPasswordRegister] = React.useState("");
+
   const Register = () => {
     Axios.post("http://localhost:3080/users", {
       email: emailRegister,
@@ -18,19 +19,25 @@ export default function Cadastro() {
       <main>
         <section className="cadastro">
           <input
-            type="text"
+            type="email"
             placeholder="exemple@exemple.com"
+            name="email"
+            value={email}
             onChange={(e) => {
               setEmailRegister(e.target.value);
             }}
+            onFocus={handleInputFocus}
           />
           <input
             type="password"
             className="senha"
             placeholder="Senha"
+            name="password"
+            value={password}
             onChange={(e) => {
               setPasswordRegister(e.target.value);
             }}
+            onFocus={handleInputFocus}
           />
           <img src={Olho1} className="btn" alt="" />
           <input type="password" placeholder="confirmar senha" />
