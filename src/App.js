@@ -5,8 +5,8 @@ import Cadastro from "./components/pages/Cadastro";
 import Produto from "./components/pages/Produto";
 import Carrinho from "./components/pages/Carrinho";
 import {BrowserRouter, Routes, Route, Navigate,  Outlet} from "react-router-dom";
-
 import {isLogged} from "./helpers/Auth.js";
+
 
 const ProtectedRoute = () => {
   if (!isLogged()){
