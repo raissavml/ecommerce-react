@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./styles/style.css";
-import "./styles/geral.css";
+import "../../styles/style.css";
+import "../../styles/geral.css";
 
 import Carrossel1 from "../../imagens/Carrossel/1.jpg";
 import Carrossel2 from "../../imagens/Carrossel/2.jpg";

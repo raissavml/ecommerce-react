@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import "../../styles/login.css";
+
 // == Images ==
 import olho1 from "../../imagens/icones/olho1.png";
 

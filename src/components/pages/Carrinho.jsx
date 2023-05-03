@@ -1,4 +1,7 @@
 import React from "react";
+
+import "../../styles/carrinho.css";
+
 import CamisaListrada from "../../imagens/Geral/Camisa Listrada.jpg";
 import CorCamisaListrada from "../../imagens/Geral/corcamisalistrada.png";
 
