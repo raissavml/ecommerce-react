@@ -1,13 +1,19 @@
 import React from "react";
+
+import "./styles/style.css";
+import "./styles/geral.css";
+
 import Carrossel1 from "../../imagens/Carrossel/1.jpg";
 import Carrossel2 from "../../imagens/Carrossel/2.jpg";
 import Carrossel3 from "../../imagens/Carrossel/3.jpg";
+
 import CamisaMasculina from "../../imagens/Geral/camisa_masc.png";
 import CalcaMasculina from "../../imagens/Geral/Calça_masc.png";
 import DestaqueMasculino from "../../imagens/Geral/destaque.png";
 import CamisaFeminina from "../../imagens/Geral/Camisa_fem.png";
 import CalcaFeminina from "../../imagens/Geral/Calça_fem.png";
 import DestaqueFeminino from "../../imagens/Geral/destaque.png";
+
 import { Link } from "react-router-dom";
 
 export default function Home() {
