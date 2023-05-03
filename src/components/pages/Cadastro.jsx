@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../styles/cadastro.css";
+import "../../styles/login.css";
 
 import Olho1 from "../../imagens/icones/olho1.png";
 import { Link } from "react-router-dom";
