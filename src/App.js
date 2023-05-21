@@ -16,6 +16,8 @@ const ProtectedRoute = () => {
   return <Outlet/>;
 }
 
+//reajustar rota de produtos após testar página de produto específico//
+
 function App() {
   return (
   <BrowserRouter>
@@ -26,7 +28,7 @@ function App() {
         <Route path="/carrinho" element={<Carrinho/>}/>            
         </Route>
         <Route path="/cadastro" element={<Cadastro/>}/>
-        <Route path="/produtos" element={<Produtos/>}/>
+        <Route path="/produtos" element={<Produto/>}/> 
         <Route path="/produtos/:produtoId" element={<Produto/>}/>
         <Route path="*" element={(<div>Página não encontrada</div>)}/>
       </Routes>
