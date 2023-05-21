@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.registerTitle{
+    background-color: #FEFAE0;
+}
+
+.haveLogin{
+display: flex;
+justify-content: right;
+margin-right: 10%;
+}
+
+.haveLogin a{
+    text-decoration: none;
+    color: black;
+}
+
+.cadastro{
+display: flex;
+justify-content: space-around;
+}
+
+.cadastro button{
+    width: 9em;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.cadastro input{
+    border-radius: 60px;
+    padding-left: 1em;
+}
+.eyeIcon{
+    width: 20px;
+}

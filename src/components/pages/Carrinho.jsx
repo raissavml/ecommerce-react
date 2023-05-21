@@ -2,6 +2,9 @@ import React from "react";
 
 import "../../styles/carrinho.css";
 
+import Header from "../modules/Header";
+import Footer from "../modules/Footer";
+
 import CamisaListrada from "../../imagens/Geral/Camisa Listrada.jpg";
 import CorCamisaListrada from "../../imagens/Geral/corcamisalistrada.png";
 
@@ -13,10 +16,11 @@ export default function Carrinho() {
 
   return (
     <>
-      <main classname="d-flex flex-column">
-        <section classname="d-flex carrinhoCount">
-          <h1>Meu carrinho</h1>
-          <div classname="d-flex justify-content-space-around aling-itens-center">
+      {Header()}
+      <main className="d-flex flex-column">
+        <section className="d-flex carrinhoCount">
+          <h1 className="CartTitle">Meu carrinho</h1>
+          <div className="d-flex justify-content-space-around aling-itens-center">
             <h2 id="QuantidadeDeProdutos" type="number">
               1
             </h2>
@@ -26,40 +30,40 @@ export default function Carrinho() {
           </div>
         </section>
         <div>
-          <section classname="carrinhoVazio">
-            <ul classname="CarrinhoLista">
-              <li classname="CarrinhoItem">
+          <section className="carrinhoVazio">
+            <ul className="CarrinhoLista">
+              <li className="CarrinhoItem">
                 <a href>
                   <img
-                    classname="ImagemProduto"
+                    className="ImagemProduto"
                     src={CamisaListrada}
                     alt="Homem vestindo camisa branca com listras cinzas e textura, apoiado no parapeito de uma ponte. Foto tirada ao pôr do sol."
                   />
                 </a>
-                <div classname="DetalhesProduto">
-                  <h4 classname="nomeProduto">
+                <div className="DetalhesProduto">
+                  <h4 className="nomeProduto">
                     Camisa branca com listras cinzas, botões e textura
                   </h4>
-                  <div classname="d-flex">
+                  <div className="d-flex">
                     <p>R$</p>
-                    <p classname="PrecoProduto">100,00</p>
+                    <p className="PrecoProduto">100,00</p>
                   </div>
-                  <div classname="d-flex PreferenciasCliente">
+                  <div className="d-flex PreferenciasCliente">
                     <img
-                      classname="CorProduto"
+                      className="CorProduto"
                       src={CorCamisaListrada}
                       alt="Cor selecionada: Branco e cinza"
                     />
-                    <p classname="TamanhoProduto">PP</p>
+                    <p className="TamanhoProduto">PP</p>
                     <button
-                      classname="ReduzirQuantidade"
+                      className="ReduzirQuantidade"
                       onclick={reduceProductQuantity}
                     >
                       -
                     </button>
                     <p id="QuantidadeProduto">0</p>
                     <button
-                      classname="AumentarQuantidade"
+                      className="AumentarQuantidade"
                       onclick={addProductQuantity}
                     >
                       +
@@ -67,7 +71,7 @@ export default function Carrinho() {
                   </div>
                 </div>
                 <button
-                  classname="ExcluirProduto"
+                  className="ExcluirProduto"
                   onclick="console.log('remove')"
                 >
                   X
@@ -75,15 +79,15 @@ export default function Carrinho() {
               </li>
             </ul>
           </section>
-          <div classname="d-flex carrinhoCount">
-            <p classname="valueOrganizer">Subtotal</p>
-            <div classname="d-flex justify-content-center aling-itens-center">
+          <div className="d-flex carrinhoCount">
+            <p className="valueOrganizer">Subtotal</p>
+            <div className="d-flex justify-content-center aling-itens-center">
               <p>R$</p>
               <p id="ValorSubtotal">0,00</p>
             </div>
           </div>
           <form>
-            <div classname="singleInput">
+            <div className="singleInput">
               <label>Cupom de desconto</label>
               <input
                 type="text"
@@ -91,10 +95,10 @@ export default function Carrinho() {
                 id="cupomDesconto"
               />
             </div>
-            <section classname="dadosCarrinho">
-              <div classname="container-fluid content">
-                <div classname="dubleInput">
-                  <div classname="organizeInput">
+            <section className="dadosCarrinho">
+              <div className="container-fluid content">
+                <div className="dubleInput">
+                  <div className="organizeInput">
                     <label>CEP de entrega</label>
                     <input
                       type="text"
@@ -102,7 +106,7 @@ export default function Carrinho() {
                       id="cep"
                     />
                   </div>
-                  <div classname="organizeInput">
+                  <div className="organizeInput">
                     <label>Logradouro</label>
                     <input
                       type="text"
@@ -111,8 +115,8 @@ export default function Carrinho() {
                     />
                   </div>
                 </div>
-                <div classname="dubleInput">
-                  <div classname="organizeInput">
+                <div className="dubleInput">
+                  <div className="organizeInput">
                     <label>Número</label>
                     <input
                       type="text"
@@ -120,7 +124,7 @@ export default function Carrinho() {
                       id="numero"
                     />
                   </div>
-                  <div classname="organizeInput">
+                  <div className="organizeInput">
                     <label>Complemento</label>
                     <input
                       type="text"
@@ -129,8 +133,8 @@ export default function Carrinho() {
                     />
                   </div>
                 </div>
-                <div classname="dubleInput">
-                  <div classname="organizeInput">
+                <div className="dubleInput">
+                  <div className="organizeInput">
                     <label>Cidade</label>
                     <input
                       type="text"
@@ -138,7 +142,7 @@ export default function Carrinho() {
                       id="localidade"
                     />
                   </div>
-                  <div classname="organizeInput">
+                  <div className="organizeInput">
                     <label>Estado</label>
                     <input
                       type="text"
@@ -148,25 +152,26 @@ export default function Carrinho() {
                   </div>
                 </div>
               </div>
-              <div classname="frete">
-                <p classname="valueOrganizer">
+              <div className="frete">
+                <p className="valueOrganizer">
                   Frete: R$<span id="Frete">0,00</span>
                 </p>
               </div>
             </section>
           </form>
         </div>
-        <div classname="d-flex carrinhoCount total">
-          <p classname="total valueOrganizer">Total:</p>
-          <div classname="d-flex justify-content-center aling-itens-center">
-            <p classname="total">R$</p>
-            <p classname="total" id="ValorTotal">
+        <div className="d-flex carrinhoCount total">
+          <p className="total valueOrganizer">Total:</p>
+          <div className="d-flex justify-content-center aling-itens-center">
+            <p className="total">R$</p>
+            <p className="total" id="ValorTotal">
               0,00
             </p>
           </div>
         </div>
-        <button classname="finalizarCompra">Finalizar Carrinho</button>
+        <button className="finalizarCompra">Finalizar Carrinho</button>
       </main>
+      {Footer()}
     </>
   );
 }

@@ -9,9 +9,9 @@ import {isLogged} from "./helpers/Auth.js";
 
 
 const ProtectedRoute = () => {
-  if (!isLogged()){
-    return <Navigate to="/login" replace />;
-  }
+//  if (!isLogged()){
+  //  return <Navigate to="/login" replace />;
+ // }
   return <Outlet/>;
 }
 

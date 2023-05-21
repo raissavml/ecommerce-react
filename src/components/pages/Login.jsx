@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 
 import "../../styles/login.css";
 
+import Header from "../modules/Header";
+import Footer from "../modules/Footer";
+
 // == Images ==
 import olho1 from "../../imagens/icones/olho1.png";
 
@@ -43,11 +46,14 @@ export default function Login() {
 
   return (
     <>
+      {Header(true)}
       <main>
-        <section>
+        <h1 className="titleLogin">Faça seu login</h1>
+        <section className="loginSection">
+          <label>Email:</label>
           <input
             type="email"
-            placeholder="Email"
+            placeholder="exemplo@email.com"
             name="email"
             value={email}
             onChange={(e) => {
@@ -55,10 +61,11 @@ export default function Login() {
             }}
             onFocus={handleInputFocus}
           />
+          <label>Senha:</label>
           <input
             type="password"
             className="senha"
-            placeholder="Senha"
+            placeholder="******"
             name="password"
             value={password}
             onChange={(e) => {
@@ -67,12 +74,13 @@ export default function Login() {
             onFocus={handleInputFocus}
           />
           <img src={olho1} className="btn" alt="" />
+          <Link to="/">Esqueceu sua senha?</Link>
           <button onClick={handleLogin} className="button">
             Entrar
           </button>
-          <Link to="/">Esqueceu sua senha?</Link>
         </section>
       </main>
+      {Footer()}
     </>
   );
 }

@@ -10,19 +10,21 @@ body {
 
 main {
     background: #FEFAE0;
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding: 3em 0;
     box-sizing: border-box;
 }
 
-h1 {
+.CartTitle {
     color: #D4A373;
     margin-left: 2em;
+    width: fit-content;
+    background: #FEFAE0;
 }
 
 h2 {
     color: #D4A373;
     padding-left: 0.5em;
+    width: fit-content;
 }
 
 h4 {
