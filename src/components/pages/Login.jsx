@@ -47,7 +47,7 @@ export default function Login() {
   return (
     <>
       {Header(true)}
-      <main>
+      <main className="loginContainer">
         <h1 className="titleLogin">Faça seu login</h1>
         <section className="loginSection">
           <label>Email:</label>
