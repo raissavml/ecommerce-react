@@ -49,9 +49,13 @@ export default function Produtos() {
   return (
     <>
       {Header()}
-      <div className="products">
+      <main className="products">
+        <div className="buttonsContainer">
+          <button>Filtros</button>
+          <button>Ordenar por</button>
+        </div>
         {products.map((product) => ProductCard(product))}
-      </div>
+      </main>
 
       {Footer()}
     </>

@@ -85,9 +85,8 @@ footer {
     background-color: #E9EDC9;
     display: flex;
     align-items: center;
-
-
 }
+
 footer img{
     width: 150px;
     margin-left: 3em;
@@ -161,9 +160,15 @@ margin-top: 2em;
     .productCategory img{
         width: 300px;
     }
+
 h1 {
     color: #D4A373;
     text-align: center;
     border-color: solid;
     background-color: #CCD5AE;  
+}
+
+a:link {
+    text-decoration: none;
+    font-size: large;
 }

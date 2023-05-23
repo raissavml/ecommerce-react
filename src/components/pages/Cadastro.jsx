@@ -54,13 +54,13 @@ export default function Cadastro() {
   return (
     <>
       {Header(false, true)}
-      <main>
+      <main className="register">
         <h1 className="registerTitle">Faça seu cadastro</h1>
         <div className="haveLogin">
           <span>
-            já está cadastrado?{" "}
+            Já está cadastrado?{" "}
             <Link to="/login" target="_blank" rel="noreferrer">
-              Fazer login
+              <p className="goToLogin">Fazer login</p>
             </Link>
           </span>
         </div>

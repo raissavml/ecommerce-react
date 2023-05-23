@@ -35,7 +35,7 @@ export default function Home() {
         Moda Masculina
       </h1>
       <section className="productCategory">
-        <Link to="/Produto">
+        <Link to="/Produtos">
           <p>Camisas Masculinas</p>
           <img src={CamisaMasculina} alt="Camisa-masculina" />
         </Link>

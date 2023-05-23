@@ -74,7 +74,9 @@ export default function Login() {
             onFocus={handleInputFocus}
           />
           <img src={olho1} className="btn" alt="" />
-          <Link to="/">Esqueceu sua senha?</Link>
+          <Link to="/">
+            <p className="changePassword"> Esqueceu sua senha?</p>
+          </Link>
           <button onClick={handleLogin} className="button">
             Entrar
           </button>

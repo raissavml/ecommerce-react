@@ -26,21 +26,25 @@ body {
 text-decoration: none;
 }
 
-.loginSection label{
-
-}
-
 .loginSection input{  
     margin: 15px 0;
     padding: 8px;
     border-radius: 60px;
     width: 90%;
+    border:none;
 }
 
 .loginSection img{
     width: 23px;
     height: 23px;
     cursor: pointer;
+}
+
+.changePassword{
+    color:#D4A373;
+}
+.changePassword:hover{
+    color: #CCD5AE;
 }
 
 .button{

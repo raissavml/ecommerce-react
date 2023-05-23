@@ -85,6 +85,7 @@ export default function Produto() {
               />
             </div>
           </div>
+          <button className="addToCart">Adicionar ao carrinho</button>
         </div>
       </main>
       {Footer()}

@@ -35,13 +35,14 @@ width: 30%;
 }
 
 .containerSize span{
-    width: 25px;
+    width: 27px;
+    height: 27px;
     border-radius: 50%;
     background-color: #D4A373;
     color: #FEFAE0;
-    text-align: center;
     margin-right: 10px;
     cursor: pointer;
+    text-align: center;
 }
 
 .containerColor{
@@ -51,8 +52,8 @@ width: 30%;
 }
 
 .containerColor span{
-    height: 25px;
-    width: 25px;
+    height: 27px;
+    width: 27px;
     border-radius: 50%;
     border:1px solid #D4A373;
     margin-right: 10px;
@@ -65,4 +66,13 @@ span.activeSize{
 
 span.activeColor{
     border-color: #CCD5AE;
+}
+.addToCart{
+    border-radius: 60px;
+    background: #D4A373;
+    color: #FEFAE0;
+    border: none;
+    margin-top: 20px;
+    width: 170px;
+    height: 35px;
 }

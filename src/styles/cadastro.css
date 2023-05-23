@@ -7,6 +7,9 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.register{
+    padding-bottom: 140px;
+}
 
 .registerTitle{
     background-color: #FEFAE0;
@@ -40,7 +43,21 @@ justify-content: space-around;
 .cadastro input{
     border-radius: 60px;
     padding-left: 1em;
+    border: none;
 }
 .eyeIcon{
     width: 20px;
+}
+label{
+    color: #D4A373;
+}
+span{
+    color: #D4A373;
+}
+
+.goToLogin{
+    color:#D4A373;
+}
+.goToLogin:hover{
+    color: #CCD5AE;
 }
