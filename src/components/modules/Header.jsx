@@ -1,22 +1,20 @@
 import React from "react";
-import IconeMenu from "../../imagens/icones/icone-menu.png";
-import IconeLupa from "../../imagens/icones/icone-lupa.png";
-import IconeCarrinho from "../../imagens/icones/icone-carrinho.png";
+import Menu from "./Menu.jsx";
+import { FiSearch } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fi";
 import Logo from "../../imagens/Geral/LOGO NOVA.png";
 import { Link } from "react-router-dom";
 
 export default function Header(isLogin = false, isRegister = false) {
   return (
     <>
-      <header>
+      <header className="headerContainer">
         {!isLogin && !isRegister && (
           <div className="procurar">
-            <img className="menu" src={IconeMenu} alt="icone do menu" />
-            <img
-              className="lupa"
-              src={IconeLupa}
-              alt="ícone de lupa para realizar pesquisa"
-            />
+            {Menu()}
+            <button className="searchButton">
+              <FiSearch color="#D4A373" size={40} />
+            </button>
             <input
               id="pesquisa"
               type="text"
@@ -36,17 +34,15 @@ export default function Header(isLogin = false, isRegister = false) {
         <div className="navegadores">
           {!isLogin && !isRegister && (
             <Link to="/carrinho">
-              <img
-                className="icone-carrinho"
-                src={IconeCarrinho}
-                alt="icone do carrinho para acessar suas compras"
-              />
+              <button>
+                <FiShoppingCart color="#D4A373" size={40} />
+              </button>
             </Link>
           )}
-          <Link className="login" to="/login">
+          <Link className="loginRegister" to="/login">
             Login
           </Link>
-          <Link className="login" to="/cadastro">
+          <Link className="loginRegister" to="/cadastro">
             Cadastre-se
           </Link>
         </div>

@@ -91,8 +91,8 @@ export default function Carrinho() {
               <label>Cupom de desconto</label>
               <input
                 type="text"
-                placeholder="Caso tenha um cupom de desconto, digite aqui"
-                id="cupomDesconto"
+                placeholder="Adicione seu cupom aqui"
+                id="inputCupomDesconto"
               />
             </div>
             <section className="dadosCarrinho">

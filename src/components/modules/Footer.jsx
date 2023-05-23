@@ -12,7 +12,7 @@ export default function Footer() {
             alt="Logo da loja Fragatta escrito em marrom, com margem em formato de losango"
           />
         </Link>
-        <div>
+        <div className="informationContainer">
           <div className="linksContainer">
             <Link className="itemFooter" to="/produtos">
               Newsletter

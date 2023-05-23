@@ -123,6 +123,13 @@ button:hover {
     text-align: center;
     color: #D4A373;
 }
+#inputCupomDesconto{
+    border-radius: 60px;
+    border: none;
+    text-align: center;
+    color: #D4A373; 
+    height: 2em;
+}
 .dadosCarrinho label{
     font-weight: bold;
     font-size: 1.3em;
@@ -142,7 +149,6 @@ button:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
-
 }
 .singleInput label{
     margin-right: 2em;

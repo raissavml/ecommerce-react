@@ -23,22 +23,26 @@ header a{
     text-decoration: none;
     color: #D4A373;
 }
+.headerContainer button{
+background-color: #CCD5AE;
+border: none;
+}
+.searchButton{
+    margin-left: 15px;
+}
 .logo {
     text-align: center;
     margin-right: 10%;
 }
 
 .logo img{
-    width: 150px;
+    width: 200px;
 }
 
-.login {
+.loginRegister {
 	font-family: 'Bebas Neue', cursive;
     text-align: right;
-}
-
-.icone-carrinho {
-    width: 25px;
+    font-size: 20px;
 }
 
 .procurar {
@@ -52,21 +56,16 @@ header a{
     display:flex;
     align-items: center;
     margin-right: 20px;
-    font-size: 1.5em;
     gap: 1.5em;
 }
-.login:hover {
+
+.navegadores Link{
+    font-size: 40px;
+}
+
+.loginRegister:hover {
     color: #FEFAE0;
     transition: 300ms;
-}
-
-.menu {
-    width: 40px;
-}
-
-.lupa {
-    width: 40px;
-    margin-left: 1.5em;
 }
 
 #pesquisa {
@@ -84,7 +83,7 @@ header a{
 footer {
     background-color: #E9EDC9;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
 footer img{
@@ -94,12 +93,16 @@ footer img{
 #endereco{
     text-align: right;
     margin-top: 1em;
-    margin-right: 3em;
+    margin-right: 20px;
     font-size: 1.2em;
     color: #D4A373;
 }
+.informationContainer{
+    width: 90%;
+}
 .linksContainer{
 margin-top: 2em;
+margin-right: 20px;
 }
 .itemFooter{
     margin-left: 3em;
@@ -112,6 +115,9 @@ margin-top: 2em;
     transition: 300ms;
 }
 
+.homeContainer{
+    background-color: #FEFAE0;
+}
 
 .carrossel{
     width: 1500px;
