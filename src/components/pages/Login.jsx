@@ -2,14 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { FiEye } from "react-icons/fi";
+import { FiEyeOff } from "react-icons/fi";
 
 import "../../styles/login.css";
 
 import Header from "../modules/Header";
 import Footer from "../modules/Footer";
-
-// == Images ==
-import olho1 from "../../imagens/icones/olho1.png";
 
 import { saveToken } from "../../helpers/Auth";
 
@@ -73,7 +72,9 @@ export default function Login() {
             }}
             onFocus={handleInputFocus}
           />
-          <img src={olho1} className="btn" alt="" />
+          <button className="eyeButton">
+            <FiEye color="#D4A373" size={25} />
+          </button>
           <Link to="/">
             <p className="changePassword"> Esqueceu sua senha?</p>
           </Link>

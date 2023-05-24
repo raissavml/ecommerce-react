@@ -40,6 +40,12 @@ text-decoration: none;
     cursor: pointer;
 }
 
+.eyeButton{
+background-color: #FEFAE0;
+border: none;
+margin-left: 10px;
+}
+
 .changePassword{
     color:#D4A373;
 }

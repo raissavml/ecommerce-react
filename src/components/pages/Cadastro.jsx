@@ -5,7 +5,8 @@ import "../../styles/cadastro.css";
 import Header from "../modules/Header";
 import Footer from "../modules/Footer";
 
-import Olho1 from "../../imagens/icones/olho1.png";
+import { FiEye } from "react-icons/fi";
+import { FiEyeOff } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -201,7 +202,9 @@ export default function Cadastro() {
               }}
               onFocus={handleInputFocus}
             />
-            <img src={Olho1} className="eyeIcon" alt="" />
+            <button className="eyeButton">
+              <FiEye color="#D4A373" size={20} />
+            </button>
             <input type="password" placeholder="Confirmar senha" />
             <button className="button" onClick={Register}>
               Cadastre-se
