@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FiEye } from "react-icons/fi";
-import { FiEyeOff } from "react-icons/fi";
+//import { FiEyeOff } from "react-icons/fi";
 
 import "../../styles/login.css";
 
@@ -15,7 +15,7 @@ import { saveToken } from "../../helpers/Auth";
 export default function Login() {
   const navigate = useNavigate();
 
-  const [showError, setShowError] = React.useState("");
+  //const [showError, setShowError] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
@@ -35,12 +35,12 @@ export default function Login() {
       .catch(() => {
         setEmail("");
         setPassword("");
-        setShowError(true);
+        //   setShowError(true);
       });
   };
 
   const handleInputFocus = () => {
-    setShowError(false);
+    // setShowError(false);
   };
 
   return (

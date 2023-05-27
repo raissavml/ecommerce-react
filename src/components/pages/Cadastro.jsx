@@ -6,12 +6,12 @@ import Header from "../modules/Header";
 import Footer from "../modules/Footer";
 
 import { FiEye } from "react-icons/fi";
-import { FiEyeOff } from "react-icons/fi";
+//import { FiEyeOff } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Cadastro() {
-  const [showError, setShowError] = React.useState("");
+  // const [showError, setShowError] = React.useState("");
   const [firstName, setFirstName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
   const [cpf, setCpf] = React.useState("");
@@ -44,12 +44,12 @@ export default function Cadastro() {
       .then((response) => console.log("response"))
       .catch(() => {
         setPassword("");
-        setShowError(true);
+        //    setShowError(true);
       });
   };
 
   const handleInputFocus = () => {
-    setShowError(false);
+    // setShowError(false);
   };
 
   return (

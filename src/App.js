@@ -5,8 +5,8 @@ import Cadastro from "./components/pages/Cadastro";
 import Produtos from "./components/pages/Produtos";
 import Produto from "./components/pages/Produto";
 import Carrinho from "./components/pages/Carrinho";
-import {BrowserRouter, Routes, Route, Navigate,  Outlet} from "react-router-dom";
-import {isLogged} from "./helpers/Auth.js";
+import {BrowserRouter, Routes, Route, Outlet} from "react-router-dom";
+///import {isLogged} from "./helpers/Auth.js";
 
 
 const ProtectedRoute = () => {
