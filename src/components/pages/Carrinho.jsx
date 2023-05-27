@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../../styles/carrinho.css";
 
@@ -9,10 +9,7 @@ import CamisaListrada from "../../imagens/Geral/Camisa Listrada.jpg";
 import CorCamisaListrada from "../../imagens/Geral/corcamisalistrada.png";
 
 export default function Carrinho() {
-  const reduceProductQuantity = () =>
-    "alteraQuantidade(false, 'QuantidadeProduto')";
-  const addProductQuantity = () =>
-    "alteraQuantidade(true, 'QuantidadeProduto')";
+  const [productQuantity, setProductQuantity] = useState(0);
 
   return (
     <>
@@ -57,25 +54,24 @@ export default function Carrinho() {
                     <p className="TamanhoProduto">PP</p>
                     <button
                       className="ReduzirQuantidade"
-                      onclick={reduceProductQuantity}
+                      onClick={() =>
+                        setProductQuantity(
+                          productQuantity - 1 < 0 ? 0 : productQuantity - 1
+                        )
+                      }
                     >
                       -
                     </button>
-                    <p id="QuantidadeProduto">0</p>
+                    <p id="QuantidadeProduto">{productQuantity}</p>
                     <button
                       className="AumentarQuantidade"
-                      onclick={addProductQuantity}
+                      onClick={() => setProductQuantity(productQuantity + 1)}
                     >
                       +
                     </button>
                   </div>
                 </div>
-                <button
-                  className="ExcluirProduto"
-                  onclick="console.log('remove')"
-                >
-                  X
-                </button>
+                <button className="ExcluirProduto">X</button>
               </li>
             </ul>
           </section>
