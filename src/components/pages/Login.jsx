@@ -27,8 +27,9 @@ export default function Login() {
         email,
         password,
       })
-      .then((response) => response.json())
-      .then(({ token }) => {
+      //.then((response) => response.json())
+      .then(({ data: { token } }) => {
+        //console.log("saveToken", token);
         saveToken(token);
         navigate("/carrinho");
       })

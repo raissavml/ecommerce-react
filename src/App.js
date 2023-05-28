@@ -5,17 +5,17 @@ import Cadastro from "./components/pages/Cadastro";
 import Produtos from "./components/pages/Produtos";
 import Produto from "./components/pages/Produto";
 import Carrinho from "./components/pages/Carrinho";
-import {BrowserRouter, Routes, Route, Outlet} from "react-router-dom";
-///import {isLogged} from "./helpers/Auth.js";
+import {BrowserRouter, Routes, Navigate, Route, Outlet} from "react-router-dom";
+import {isLogged} from "./helpers/Auth.js";
 
 
 const ProtectedRoute = () => {
-// if (!isLogged()){
- //return <Navigate to="/login" replace />;
- //}
+ if (!isLogged()){
+ return <Navigate to="/login" replace />;
+ }
   return <Outlet/>;
 }
-//        <Route path="/produtos/:produtoId" element={<Produto/>}/> rota correta, trocar quando acabarem os testes
+       //<Route path="/produtos/:produtoId" element={<Produto/>}/> rota correta, trocar quando acabarem os testes
 function App() {
   return (
   <BrowserRouter>

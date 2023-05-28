@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../../styles/productCard.css";
 
-export default function ProductCard({ image, name, price }) {
+export default function ProductCard({ imageAdress, name, price }) {
   const [activeSize, setActiveSize] = useState("");
   const [activeColor, setActiveColor] = useState("");
 
@@ -11,7 +11,7 @@ export default function ProductCard({ image, name, price }) {
     <div className="productCard">
       <Link to="/produto">
         <div className="productModule">
-          <img src={image} alt="Homem utilizando camisa listrada" />
+          <img src={imageAdress} alt="Homem utilizando camisa listrada" />
           <div className="productOptions">
             <div className="sizeContainer">
               <span
@@ -68,7 +68,12 @@ export default function ProductCard({ image, name, price }) {
         <div className="productInformation">
           <div className="informationContainer">
             <p>{name}</p>
-            <p>{price}</p>
+            <p>
+              {price.toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </p>
           </div>
           <button>Comprar</button>
         </div>
