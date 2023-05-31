@@ -5,13 +5,13 @@ import Cadastro from "./components/pages/Cadastro";
 import Produtos from "./components/pages/Produtos";
 import Produto from "./components/pages/Produto";
 import Carrinho from "./components/pages/Carrinho";
-import {BrowserRouter, Routes, Navigate, Route, Outlet} from "react-router-dom";
+import {BrowserRouter, Routes, Route, Outlet} from "react-router-dom";
 import {isLogged} from "./helpers/Auth.js";
 
 
 const ProtectedRoute = () => {
  if (!isLogged()){
- return <Navigate to="/login" replace />;
+ //return <Navigate to="/login" replace />;
  }
   return <Outlet/>;
 }
